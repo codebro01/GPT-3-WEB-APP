@@ -1,0 +1,89 @@
+@use '../../index' as i;
+
+.gpt3__blog {
+    display: flex;
+    flex-direction: column;
+
+    &-heading {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 5rem;
+
+        h1 {
+            font-family: i.$font-family;
+            font-size: 62px;
+            font-weight: 800;
+            line-height: 75px;
+            letter-spacing: -0.04em;
+        }
+    }
+
+    &-container {
+        display: flex;
+        flex-direction: row;
+
+        &-groupA {
+            flex: 0.75;
+            margin-right: 2rem;
+        }
+
+        &-groupB {
+            flex: 1;
+            display: grid;
+            grid-gap: 2rem;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media screen and (max-width: 900px) {
+        &-container {
+            flex-direction: column-reverse;
+            gap: 1rem;
+
+            &-groupA {
+                margin: 2rem 0;
+
+                .gpt3__blog-container_article {
+                    width: 48%;
+
+                    &-image {
+                        height: 250px;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 700px ) {
+        &-container {
+            &-groupB {
+                grid-template-columns: repeat(1, 1fr);
+            }
+                        &-groupA {
+                margin: 2rem 0;
+
+                .gpt3__blog-container_article {
+                    width: 100%;
+
+                    &-image {
+                        height: 250px;
+                    }
+                }
+            }
+        }
+        &-heading  {
+             h1 {
+                font-size: 46px;
+                line-height: 52px;
+             }
+        }
+    }
+@media screen and (max-width: 550px) {
+        &-heading {
+            h1 {
+                font-size: 34px;
+                line-height: 42px;
+            }
+        }
+}
+
+}

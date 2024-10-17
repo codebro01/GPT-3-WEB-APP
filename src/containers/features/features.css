@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+.gpt3__features {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.gpt3__features-heading {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  text-align: left;
+  margin-right: 5rem;
+  width: 100%;
+}
+.gpt3__features-heading h1 {
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  font-size: 29px;
+  line-height: 45px;
+  font-style: normal;
+}
+.gpt3__features-heading p {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 30px;
+  font-style: normal;
+  color: #FFBA71;
+  margin-top: 2rem;
+}
+.gpt3__features-con {
+  flex: 1.5;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+.gpt3__features-con .gpt3__features-container__feature {
+  display: flex;
+}
+.gpt3__features-con .gpt3__features-container__feature-title h1 {
+  font: 20px;
+  line-height: 30px;
+}
+@media screen and (max-width: 900px) {
+  .gpt3__features {
+    flex-direction: column;
+  }
+  .gpt3__features_heading {
+    margin: 0 0 2rem 0;
+  }
+}
+@media screen and (max-width: 550px) {
+  .gpt3__features-heading h1 {
+    font-size: 25px;
+    line-height: 38px;
+  }
+}/*# sourceMappingURL=features.css.map */

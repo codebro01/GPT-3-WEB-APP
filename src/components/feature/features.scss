@@ -1,0 +1,83 @@
+@use '../../index' as i;
+
+.gpt3__features {
+
+    &-container {
+            
+        &__feature {
+            
+            flex: 1;
+            /* or a specific width like '30%' */
+            margin: 1rem;
+            /* optional spacing between elements */
+          
+        }
+
+        &__feature-title {
+            flex: 1;
+            margin-right: 2rem;
+            display: inline-flex;
+
+            h1 {
+                font-family: i.$font-family;
+                font-weight: 800;
+                font-size: 24px;
+                line-height: 75px;
+                letter-spacing: -0.04em;
+                color: #ffffff
+            }
+
+            div {
+                position: relative;
+
+                &::before {
+                    content: '';
+                    display: block;
+                    width: 50%;
+                    height: 3px;
+                    background: i.$gradient-bar;
+                }
+            }
+        }
+
+        &__feature-text {
+            flex: 2;
+            margin-left: auto;
+            max-width: 390px;
+            display: flex;
+
+            p {
+                font-family: i.$font-family;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 24px;
+                color: i.$color-text;
+            }
+        }
+    }
+
+    @media screen and (max-width:550px) {
+        &-container {
+            &__feature {
+                margin: 1rem 0;
+                flex-basis: 100%;
+            }
+            &__feature-title {
+                h1 {
+                    font-size: 17px;
+                line-height: 22px;
+                } 
+            }
+            &__feature-text {
+                p {
+                    font-size: 14px;
+                line-height: 22px;
+                } 
+            }
+            
+        }
+    }
+}
+
+
+

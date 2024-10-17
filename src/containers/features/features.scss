@@ -1,0 +1,69 @@
+@use '../../index' as i;
+
+.gpt3__features {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+
+    &-heading {
+        flex: 1;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        text-align: left;
+        margin-right: 5rem;
+        width: 100%;
+
+         h1 {
+            font-family: i.$font-family;
+            font-weight: 800;
+            font-size: 29px;
+            line-height: 45px;
+            font-style: normal;
+         }
+         p {
+            font-family: i.$font-family;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 30px;
+            font-style: normal;
+            color: #FFBA71;
+            margin-top: 2rem;
+         }
+    }
+
+    &-con {
+        flex: 1.5;
+        display: flex ;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        .gpt3__features-container__feature {
+            display: flex;
+        }
+        .gpt3__features-container__feature-title {
+            h1 {
+                font: 20px;
+                line-height: 30px;
+            }
+        }
+
+    }
+    @media screen and (max-width: 900px) {
+        flex-direction: column;
+
+        &_heading {
+            margin: 0 0 2rem 0;
+        }
+    }
+    @media screen and (max-width: 550px) {
+        &-heading {
+            h1 {
+                font-size: 25px;
+                line-height: 38px;
+            }
+        }
+    }
+}

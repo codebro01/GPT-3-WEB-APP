@@ -1,0 +1,114 @@
+@use '../../utils' as u;
+@use '../../index' as i;
+
+.gpt3__whatgpt3 {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background: i.$color-footer;
+    @include u.gradientBackground;
+    filter: drop-shadow(0px, 4px, 4px, rgba(0, 0, 0, 0.2));
+
+    &-feature {
+        display: flex;
+    }
+
+    &-feature .gpt3__features-container__feature {
+        margin: 0;
+    }
+
+    &-feature .gpt3__features-container__feature-text {
+        max-width: 700px;
+    }
+
+    &-heading {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 4rem 0 2rem;
+
+        h1 {
+            font-family: i.$font-family;
+            font-weight: 800;
+            font-size: 34px;
+            line-height: 45px;
+            max-width: 510px;
+            @include u.gradientText;
+        }
+
+        p {
+            font-family: i.$font-family;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 30px;
+            color: i.$color-subtext;
+            cursor: pointer;
+        }
+    }
+
+    &-container, &-feature {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin-top: 2rem;
+        width: 100%;    
+    }
+    &-feature {
+        .gpt3__features-container__feature {
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 850px) {
+    .gpt3__whatgpt3 {
+
+        &-heading {
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 0rem;
+
+            p {
+                margin-top: 1rem;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 650px) {
+
+    /* Customizing feature component as per needs */
+    .gpt3__whatgpt3-feature  {
+        &-feature, .gpt3__features-container__feature{
+        flex-direction: column;
+        }
+    }
+
+
+
+    /* Customizing feature component as per needs */
+    .gpt3__whatgpt3-feature .gpt3__features-container_feature-text {
+        margin-top: 0.5rem;
+    }
+
+    .gpt3__whatgpt3-heading h1 {
+        font-size: 24px;
+        line-height: 40px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+
+    /* Customizing feature component as per needs */
+    .gpt3__whatgpt3-container .gpt3__features-container__feature {
+        margin: 1rem 0;
+        min-width: 100%;
+    }
+}

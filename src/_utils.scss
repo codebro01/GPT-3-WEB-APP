@@ -1,0 +1,50 @@
+@use './index' as i;
+
+@mixin navlinks {
+    color: #fff;
+    font-family: i.$font-family;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: capitalize;
+    margin: 0 1;
+    cursor: pointer;
+}
+
+@mixin button {
+    padding: 0.5rem 1rem;
+    background: #FF4820;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-weight: 500;
+    font-family: i.$font-family;
+    font-size: 18px;
+    line-height: 25px;
+    cursor: pointer;
+}
+
+@mixin gradientBackground {
+    /* ff 3.6+ */
+    background: -moz-radial-gradient(circle at 3% 25%, rgba(0, 40, 82, 1) 0%, rgba(4, 12, 24, 1) 99%);
+
+    /* safari 5.1+,chrome 10+ */
+    background: -webkit-radial-gradient(circle at 3% 25%, rgba(0, 40, 82, 1) 0%, rgba(4, 12, 24, 1) 99%);
+
+    /* opera 11.10+ */
+    background: -o-radial-gradient(circle at 3% 25%, rgba(0, 40, 82, 1) 0%, rgba(4, 12, 24, 1) 99%);
+
+    /* ie 10+ */
+    background: -ms-radial-gradient(circle at 3% 25%, rgba(0, 40, 82, 1) 0%, rgba(4, 12, 24, 1) 99%);
+
+    /* global 92%+ browsers support */
+    background: radial-gradient(circle at 3% 25%, rgba(0, 40, 82, 1) 0%, rgba(4, 12, 24, 1) 99%);
+}
+
+@mixin gradientText {
+    background: i.$gradient-text;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
